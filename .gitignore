@@ -1,0 +1,7 @@
+tmp/
+
+kycaml-app
+
+go.sum
+
+static/xml/*
