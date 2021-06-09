@@ -4,4 +4,4 @@ kycaml-app
 
 go.sum
 
-static/xml/*
+static/xml/*.xml
