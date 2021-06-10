@@ -25,19 +25,20 @@ MIT License: [GitLab Mirror](https://gitlab.com/defcronyke/kycaml-app/-/raw/mast
 
 ## Usage
 
-- Website:
+### Website
 
-  - GitLab mirror: [https://defcronyke.gitlab.io/kycaml-app](https://defcronyke.gitlab.io/kycaml-app)
-  - GitHub mirror: [https://defcronyke.github.io/kycaml-app](https://defcronyke.github.io/kycaml-app)
-  - Local server: [http://127.0.0.1:3000](http://127.0.0.1:3000)
+- GitLab mirror: [https://defcronyke.gitlab.io/kycaml-app](https://defcronyke.gitlab.io/kycaml-app)
+- GitHub mirror: [https://defcronyke.github.io/kycaml-app](https://defcronyke.github.io/kycaml-app)
+- Local server: [http://127.0.0.1:3000](http://127.0.0.1:3000)
 
-- Consolidated Advanced Sanctions (USA):
-  - JSON (experimental):
-    - [/cons.json (GitLab mirror)](https://defcronyke.gitlab.io/kycaml-app/cons.json)
-    - [/cons.json (GitHub mirror)](https://defcronyke.github.io/kycaml-app/cons.json)
-  - XML:
-    - [/cons.xml (GitLab mirror)](https://defcronyke.gitlab.io/kycaml-app/cons.xml)
-    - [/cons.xml (GitHub mirror)](https://defcronyke.github.io/kycaml-app/cons.xml)
-  - From:
-    - [https://home.treasury.gov/policy-issues/financial-sanctions/consolidated-sanctions-list-non-sdn-lists](https://home.treasury.gov/policy-issues/financial-sanctions/consolidated-sanctions-list-non-sdn-lists)  
-      `-> CONS_ADVANCED.XML`
+### Consolidated Advanced Sanctions (USA)
+
+- JSON (experimental):
+  - [/cons.json (GitLab mirror)](https://defcronyke.gitlab.io/kycaml-app/cons.json)
+  - [/cons.json (GitHub mirror)](https://defcronyke.github.io/kycaml-app/cons.json)
+- XML:
+  - [/cons.xml (GitLab mirror)](https://defcronyke.gitlab.io/kycaml-app/cons.xml)
+  - [/cons.xml (GitHub mirror)](https://defcronyke.github.io/kycaml-app/cons.xml)
+- From:
+  - [https://home.treasury.gov/policy-issues/financial-sanctions/consolidated-sanctions-list-non-sdn-lists](https://home.treasury.gov/policy-issues/financial-sanctions/consolidated-sanctions-list-non-sdn-lists)  
+    `-> CONS_ADVANCED.XML`
