@@ -10,6 +10,7 @@ cmd/kycaml-jw/kycaml-jw
 cmd/kycaml-l/kycaml-l
 cmd/kycaml-lcs/kycaml-lcs
 cmd/kycaml-n/kycaml-n
+cmd/kycaml-o/kycaml-o
 
 static/*.xml
 static/*.json
