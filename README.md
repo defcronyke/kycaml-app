@@ -35,7 +35,7 @@ MIT License: [GitLab Mirror](https://gitlab.com/defcronyke/kycaml-app/-/raw/mast
 
 - JSON (experimental, local server only):
   - [/sdn.json (Local server)](http://127.0.0.1:3000/sdn.json)
-- XML:
+- XML (local server only):
   - [/sdn.xml (Local server)](http://127.0.0.1:3000/sdn.xml)
 - From:
   - [https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-list-data-formats-data-schemas](https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-list-data-formats-data-schemas)  
