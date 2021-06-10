@@ -44,6 +44,8 @@ func main() {
 	r.HandleFunc("/sdn", k.USASdnJSONHandler)
 	r.HandleFunc("/cons", k.USAConsJSONHandler)
 
+	r.HandleFunc("/score", k.ScoreHandler)
+
 	r.PathPrefix("/usa/").Handler(http.StripPrefix("/usa/", http.FileServer(http.Dir(staticDir))))
 	r.PathPrefix("/").Handler(http.StripPrefix("/", http.FileServer(http.Dir(staticDir))))
 

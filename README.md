@@ -8,8 +8,15 @@
 
 ## Source Code
 
+### Golang App
+
 - GitLab: [https://gitlab.com/defcronyke/kycaml-app](https://gitlab.com/defcronyke/kycaml-app)
 - GitHub [https://github.com/defcronyke/kycaml-app](https://github.com/defcronyke/kycaml-app)
+
+### Golang Module
+
+- GitLab: [https://gitlab.com/defcronyke/kycaml](https://gitlab.com/defcronyke/kycaml)
+- GitHub [https://github.com/defcronyke/kycaml](https://github.com/defcronyke/kycaml)
 
 ---
 
@@ -24,6 +31,20 @@ MIT License: [GitLab Mirror](https://gitlab.com/defcronyke/kycaml-app/-/raw/mast
 ---
 
 ## Usage
+
+### Install
+
+```shell
+git clone https://gitlab.com/defcronyke/kycaml.git; \
+git clone https://gitlab.com/defcronyke/kycaml-app.git; \
+cd kycaml-app
+```
+
+### Run the server
+
+```shell
+./run.sh
+```
 
 ### Website
 
