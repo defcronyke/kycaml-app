@@ -8,6 +8,7 @@ cmd/kycaml-j/kycaml-j
 cmd/kycaml-json/kycaml-json
 cmd/kycaml-jw/kycaml-jw
 cmd/kycaml-l/kycaml-l
+cmd/kycaml-lcs/kycaml-lcs
 
 static/*.xml
 static/*.json
