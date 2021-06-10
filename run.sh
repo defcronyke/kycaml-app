@@ -9,4 +9,9 @@ cd cmd/kycaml-cons-json; \
 ./run.sh; \
 cd "$pwd"
 
+cd kycaml; \
+go get; \
+cd "$pwd"
+
+go get; \
 fresh
