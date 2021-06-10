@@ -9,9 +9,4 @@ cd cmd/kycaml-json; \
 ./run.sh; \
 cd "$pwd"
 
-rm -rf ./docs; \
-rm -rf ./public; \
-cp -r static/ docs/; \
-cp -r static/ public/
-
 fresh
