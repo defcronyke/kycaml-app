@@ -1,6 +1,7 @@
 tmp/
 .vscode/
 
+cmd/kycaml-sdn-json/kycaml-sdn-json
 cmd/kycaml-cons-json/kycaml-cons-json
 cmd/kycaml-dl/kycaml-dl
 cmd/kycaml-dm/kycaml-dm

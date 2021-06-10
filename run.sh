@@ -5,11 +5,15 @@
 
 pwd="$PWD"
 
+cd cmd/kycaml-sdn-json; \
+./run.sh; \
+cd "$pwd"
+
 cd cmd/kycaml-cons-json; \
 ./run.sh; \
 cd "$pwd"
 
-cd kycaml; \
+cd ../kycaml; \
 go get; \
 cd "$pwd"
 
