@@ -2,7 +2,7 @@
 
 ## NO WARRANTY, USE AT YOUR OWN RISK
 
-[![pipeline status gitlab](https://gitlab.com/defcronyke/kycaml-app/badges/master/pipeline.svg)](https://gitlab.com/defcronyke/kycaml-app/-/pipelines) [![pipeline status github](https://github.com/defcronyke/kycaml-app/workflows/github-pipeline/badge.svg)](https://github.com/defcronyke/kycaml-app/actions) [![sponsor the project](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&link=https://github.com/sponsors/defcronyke)](https://github.com/sponsors/defcronyke)
+[![pipeline status gitlab](https://gitlab.com/defcronyke/kycaml-app/badges/master/pipeline.svg)](https://gitlab.com/defcronyke/kycaml-app/-/pipelines) [![sponsor the project](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&link=https://github.com/sponsors/defcronyke)](https://github.com/sponsors/defcronyke)
 
 ---
 
