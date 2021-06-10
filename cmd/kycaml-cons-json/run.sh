@@ -7,4 +7,4 @@ go get; \
 cd "$pwd"
 
 go build && \
-./kycaml-dm "$@"
+./kycaml-cons-json | tee ../../static/cons.json >/dev/null; \

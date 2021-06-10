@@ -5,7 +5,7 @@
 
 pwd="$PWD"
 
-cd cmd/kycaml-json; \
+cd cmd/kycaml-cons-json; \
 ./run.sh; \
 cd "$pwd"
 

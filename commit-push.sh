@@ -5,7 +5,7 @@ git_commit_push() {
   
   cp README.md kycaml/
 
-  cd cmd/kycaml-json; \
+  cd cmd/kycaml-cons-json; \
   ./run.sh; \
   cd ../..
 

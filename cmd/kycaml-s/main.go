@@ -10,19 +10,19 @@ import (
 
 func main() {
 	if len(os.Args) < 2 {
-		fmt.Printf("Usage: %v <input_string>\n", os.Args[0])
+		fmt.Printf("Usage: %v <str1>\n", os.Args[0])
 		os.Exit(1)
 		return
 	}
 
 	args := os.Args[1:]
 
-	res := kycaml.NewDoubleMetaphone(args...)
+	res := kycaml.NewSoundex(args...)
 
 	resBytes, err := json.Marshal(res)
 	if err != nil {
-		fmt.Printf("error marshaling json from res: %v", err)
-		os.Exit(3)
+		fmt.Printf("error: %v", err)
+		os.Exit(2)
 		return
 	}
 
