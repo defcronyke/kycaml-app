@@ -25,6 +25,12 @@ MIT License: [GitLab Mirror](https://gitlab.com/defcronyke/kycaml-app/-/raw/mast
 
 ## Usage
 
+- Website:
+
+  - GitLab mirror: [https://defcronyke.gitlab.io/kycaml-app](https://defcronyke.gitlab.io/kycaml-app)
+  - GitHub mirror: [https://defcronyke.github.io/kycaml-app](https://defcronyke.github.io/kycaml-app)
+  - Local Server: [http://127.0.0.1:3000](http://127.0.0.1:3000)
+
 - Consolidated Advanced Sanctions (USA):
   - JSON (experimental):
     - [/cons.json (GitLab mirror)](https://defcronyke.gitlab.io/kycaml-app/cons.json)
