@@ -2,11 +2,14 @@
 
 git_commit_push() {
   msg="$@"
+  
+  cd cmd/kycaml-json; \
+  ./run.sh; \
+  cd ../..
 
-  rm -rf ./docs
-  rm -rf ./public
-
-  cp -r static/ docs/
+  rm -rf ./docs; \
+  rm -rf ./public; \
+  cp -r static/ docs/; \
   cp -r static/ public/
 
   cd kycaml; \

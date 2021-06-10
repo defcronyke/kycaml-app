@@ -1,7 +1,10 @@
 tmp/
 .vscode/
 
+cmd/kycaml-json/kycaml-json
+
 static/*.xml
+static/*.json
 
 go.sum
 kycaml-app

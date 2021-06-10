@@ -36,11 +36,8 @@ func main() {
 
 	r := mux.NewRouter()
 
-	r.HandleFunc("/usa/cons", kycaml.USAConsHandler)
-	r.HandleFunc("/usa/cons.json", kycaml.USAConsHandler)
-
-	r.HandleFunc("/cons", kycaml.USAConsHandler)
-	r.HandleFunc("/cons.json", kycaml.USAConsHandler)
+	r.HandleFunc("/usa/cons", kycaml.USAConsJSONHandler)
+	r.HandleFunc("/cons", kycaml.USAConsJSONHandler)
 
 	r.PathPrefix("/").Handler(http.StripPrefix("/", http.FileServer(http.Dir(staticDir))))
 	http.Handle("/", r)
