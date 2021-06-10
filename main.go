@@ -1,5 +1,7 @@
 package main
 
+/** kycaml-app */
+
 import (
 	"fmt"
 	"log"
