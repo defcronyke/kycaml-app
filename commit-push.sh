@@ -3,6 +3,8 @@
 git_commit_push() {
   msg="$@"
   
+  cp README.md kycaml/
+
   cd cmd/kycaml-json; \
   ./run.sh; \
   cd ../..
