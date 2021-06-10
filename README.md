@@ -34,9 +34,9 @@ MIT License: [GitLab Mirror](https://gitlab.com/defcronyke/kycaml-app/-/raw/mast
 ### Specially Designated Nationals And Blocked Persons (USA)
 
 - JSON (experimental, local server only):
-  - [/sdn.json (Local server)](http://127.0.0.1:3000/sdn.json)
+  - [http://127.0.0.1:3000/sdn.json](http://127.0.0.1:3000/sdn.json)
 - XML (local server only):
-  - [/sdn.xml (Local server)](http://127.0.0.1:3000/sdn.xml)
+  - [http://127.0.0.1:3000/sdn.xml](http://127.0.0.1:3000/sdn.xml)
 - From:
   - [https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-list-data-formats-data-schemas](https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-list-data-formats-data-schemas)  
     `-> SDN_ADVANCED.XML`
@@ -44,11 +44,13 @@ MIT License: [GitLab Mirror](https://gitlab.com/defcronyke/kycaml-app/-/raw/mast
 ### Consolidated Advanced Sanctions (USA)
 
 - JSON (experimental):
-  - [/cons.json (GitLab mirror)](https://defcronyke.gitlab.io/kycaml-app/cons.json)
-  - [/cons.json (GitHub mirror)](https://defcronyke.github.io/kycaml-app/cons.json)
+  - [https://defcronyke.gitlab.io/kycaml-app/cons.json](https://defcronyke.gitlab.io/kycaml-app/cons.json)
+  - [https://defcronyke.github.io/kycaml-app/cons.json](https://defcronyke.github.io/kycaml-app/cons.json)
+  - [http://127.0.0.1:3000/cons.json](http://127.0.0.1:3000/cons.json)
 - XML:
-  - [/cons.xml (GitLab mirror)](https://defcronyke.gitlab.io/kycaml-app/cons.xml)
-  - [/cons.xml (GitHub mirror)](https://defcronyke.github.io/kycaml-app/cons.xml)
+  - [https://defcronyke.gitlab.io/kycaml-app/cons.xml](https://defcronyke.gitlab.io/kycaml-app/cons.xml)
+  - [https://defcronyke.github.io/kycaml-app/cons.xml](https://defcronyke.github.io/kycaml-app/cons.xml)
+  - [http://127.0.0.1:3000/cons.xml](http://127.0.0.1:3000/cons.xml)
 - From:
   - [https://home.treasury.gov/policy-issues/financial-sanctions/consolidated-sanctions-list-non-sdn-lists](https://home.treasury.gov/policy-issues/financial-sanctions/consolidated-sanctions-list-non-sdn-lists)  
     `-> CONS_ADVANCED.XML`
