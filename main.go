@@ -41,6 +41,7 @@ func main() {
 	r.HandleFunc("/usa/cons", kycaml.USAConsJSONHandler)
 	r.HandleFunc("/cons", kycaml.USAConsJSONHandler)
 
+	r.PathPrefix("/usa/").Handler(http.StripPrefix("/usa/", http.FileServer(http.Dir(staticDir))))
 	r.PathPrefix("/").Handler(http.StripPrefix("/", http.FileServer(http.Dir(staticDir))))
 	http.Handle("/", r)
 
