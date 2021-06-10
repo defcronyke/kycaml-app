@@ -18,7 +18,7 @@ func main() {
 	log.Printf("%v", k.InitMsg())
 
 	host_default := "127.0.0.1"
-	port_default := "8080"
+	port_default := "3000"
 
 	host := os.Getenv("HOST")
 	if host == "" {
@@ -32,14 +32,17 @@ func main() {
 
 	addr := fmt.Sprintf("%v:%v", host, port)
 
+	staticDir := "./static"
+
 	r := mux.NewRouter()
 
-	// This will serve files under http://localhost:8000/static/<filename>
-	dir := "./static/xml"
-	r.PathPrefix("/static/xml/").HandlerFunc(kycaml.SetHeader("Content-Type", "application/xml", http.StripPrefix("/static/xml/", http.FileServer(http.Dir(dir)))))
-	// r.PathPrefix("/static/").Handler(http.StripPrefix("/static/", http.FileServer(http.Dir(dir))))
+	r.HandleFunc("/usa/cons", kycaml.USAConsHandler)
+	r.HandleFunc("/usa/cons.json", kycaml.USAConsHandler)
 
-	r.HandleFunc("/", kycaml.IndexHandler)
+	r.HandleFunc("/cons", kycaml.USAConsHandler)
+	r.HandleFunc("/cons.json", kycaml.USAConsHandler)
+
+	r.PathPrefix("/").Handler(http.StripPrefix("/", http.FileServer(http.Dir(staticDir))))
 	http.Handle("/", r)
 
 	srv := &http.Server{

@@ -1,7 +1,7 @@
 tmp/
+.vscode/
 
-kycaml-app
+static/*.xml
 
 go.sum
-
-static/xml/*.xml
+kycaml-app
