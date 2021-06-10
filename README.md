@@ -31,6 +31,16 @@ MIT License: [GitLab Mirror](https://gitlab.com/defcronyke/kycaml-app/-/raw/mast
 - GitHub mirror: [https://defcronyke.github.io/kycaml-app](https://defcronyke.github.io/kycaml-app)
 - Local server: [http://127.0.0.1:3000](http://127.0.0.1:3000)
 
+### Specially Designated Nationals And Blocked Persons (USA)
+
+- JSON (experimental, local server only):
+  - [/sdn.json (Local server)](http://127.0.0.1:3000/sdn.json)
+- XML:
+  - [/sdn.xml (Local server)](http://127.0.0.1:3000/sdn.xml)
+- From:
+  - [https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-list-data-formats-data-schemas](https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-list-data-formats-data-schemas)  
+    `-> SDN_ADVANCED.XML`
+
 ### Consolidated Advanced Sanctions (USA)
 
 - JSON (experimental):

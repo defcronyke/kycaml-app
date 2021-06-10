@@ -19,5 +19,11 @@ cmd/kycaml-sw/kycaml-sw
 static/*.xml
 static/*.json
 
+docs/sdn.json
+docs/sdn.xml
+
+public/sdn.json
+public/sdn.xml
+
 go.sum
 kycaml-app
