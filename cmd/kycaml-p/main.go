@@ -17,7 +17,7 @@ func main() {
 
 	args := os.Args[1:]
 
-	res := kycaml.NewNYSIIS(args...)
+	res := kycaml.NewPhonex(args...)
 
 	resBytes, err := json.Marshal(res)
 	if err != nil {

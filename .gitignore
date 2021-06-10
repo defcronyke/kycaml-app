@@ -11,6 +11,7 @@ cmd/kycaml-l/kycaml-l
 cmd/kycaml-lcs/kycaml-lcs
 cmd/kycaml-n/kycaml-n
 cmd/kycaml-o/kycaml-o
+cmd/kycaml-p/kycaml-p
 
 static/*.xml
 static/*.json
