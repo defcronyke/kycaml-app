@@ -1,8 +1,9 @@
 tmp/
 .vscode/
 
-cmd/kycaml-json/kycaml-json
+cmd/kycaml-dl/kycaml-dl
 cmd/kycaml-dm/kycaml-dm
+cmd/kycaml-json/kycaml-json
 
 static/*.xml
 static/*.json
