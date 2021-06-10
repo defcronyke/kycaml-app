@@ -35,6 +35,9 @@ debug-linux-x86_64:
   # "test",
   script:
     - sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo apt-get autoremove -y # Install OS updates.
+    - mkdir kycaml-app && mv * kycaml-app/ || true
+    - git clone https://gitlab.com/defcronyke/kycaml.git
+    - cd kycaml-app
     - go version # Display golang version.
     - ls -al
     - go get
@@ -48,7 +51,7 @@ debug-linux-x86_64:
     name: kycaml-app-debug-linux-x86_64
     # expire_in: never  # Keep this stage's output artifacts forever.
     paths: # The files found at these paths will be added to the artifacts archive for this pipeline stage.
-      - kycaml-app
+      - kycaml-app/kycaml-app
 
 # Pipeline "release-linux-x86_64" stage
 release-linux-x86_64:
@@ -72,7 +75,6 @@ release-linux-x86_64:
     - mkdir -p kycaml-app
     - cp main kycaml-app/kycaml-app
     - cp -r public/ kycaml-app/static/
-    - strip -s kycaml-app/kycaml-app
     - chmod 755 kycaml-app/kycaml-app
   artifacts:
     name: kycaml-app-release-linux-x86_64
