@@ -19,7 +19,7 @@ KYCAML_APP_CMD_DIRS=(
 )
 
 for dir in ${KYCAML_APP_CMD_DIRS[@]}; do
-	cd "cmd/$dir" && \
+	cd cmd/"$dir" && \
 	echo "building: $dir" && \
 	go build -ldflags="-s -w" && \
 	upx --brute "$dir" && \

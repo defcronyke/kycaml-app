@@ -56,7 +56,7 @@ chmod -R 755 cmd
 ```shell
 git clone https://gitlab.com/defcronyke/kycaml.git; \
 git clone https://gitlab.com/defcronyke/kycaml-app.git; \
-cd kycaml-app && \
+cd kycaml-app; \
 ./build-cmd.sh
 ```
 
