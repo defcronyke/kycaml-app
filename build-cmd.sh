@@ -20,9 +20,9 @@ KYCAML_APP_CMD_DIRS=(
 
 pwd="$PWD"
 
-cd ../kycaml
-go get
-cd "$pwd"
+cd ../kycaml; \
+go get; \
+cd "$pwd"; \
 go get
 
 for dir in ${KYCAML_APP_CMD_DIRS[@]}; do
@@ -30,5 +30,5 @@ for dir in ${KYCAML_APP_CMD_DIRS[@]}; do
 	echo "building: $dir"; \
 	go build -ldflags="-s -w"; \
 	upx --brute "$dir"; \
-	cd ../..
+	cd "$pwd"
 done
