@@ -57,7 +57,8 @@ chmod -R 755 cmd
 git clone https://gitlab.com/defcronyke/kycaml.git; \
 git clone https://gitlab.com/defcronyke/kycaml-app.git; \
 cd kycaml-app; \
-./build-cmd.sh
+./build-cmd.sh; \
+./build.sh
 ```
 
 ---
@@ -67,7 +68,13 @@ cd kycaml-app; \
 ### Update the sanctions lists
 
 ```shell
-./get-lists.sh
+./get-lists.sh; \
+cd cmd/kycaml-sdn-json; \
+./kycaml-sdn-json | tee ../../static/sdn.json >/dev/null; \
+cd ../..; \
+cd cmd/kycaml-cons-json; \
+./kycaml-cons-json | tee ../../static/cons.json >/dev/null; \
+cd ../..
 ```
 
 ### Run the server

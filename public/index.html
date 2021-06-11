@@ -71,7 +71,8 @@ chmod -R 755 cmd</pre>
             <pre style="background-color: black; color: white; font-size: medium; font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace; width: 48em; padding: 0.9em;">git clone https://gitlab.com/defcronyke/kycaml.git; \
 git clone https://gitlab.com/defcronyke/kycaml-app.git; \
 cd kycaml-app; \
-./build-cmd.sh</pre>
+./build-cmd.sh; \
+./build.sh</pre>
             </p>
           </li>
         </ul>
@@ -84,7 +85,13 @@ cd kycaml-app; \
           <li>
             <span>Update the sanctions lists:</span>
             <p>
-            <pre style="background-color: black; color: white; font-size: medium; font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace; width: 48em; padding: 0.9em;">./get-lists.sh</pre>
+            <pre style="background-color: black; color: white; font-size: medium; font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace; width: 48em; padding: 0.9em;">./get-lists.sh; \
+cd cmd/kycaml-sdn-json; \
+./kycaml-sdn-json | tee ../../static/sdn.json >/dev/null; \
+cd ../..; \
+cd cmd/kycaml-cons-json; \
+./kycaml-cons-json | tee ../../static/cons.json >/dev/null; \
+cd ../..</pre>
             </p>
           </li>
         </ul>
