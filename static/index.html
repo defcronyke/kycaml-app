@@ -9,8 +9,10 @@
 <body>
   <div id="page">
     <div id="title">
-      <h3>KYC AML (USA Sanctions-Based) - NO WARRANTY, USE AT YOUR OWN RISK!</h3>
+      <h2>KYC AML (USA Sanctions-Based) - NO WARRANTY, USE AT YOUR OWN RISK!</h2>
     </div>
+
+    <hr />
 
     <div id="body">
       <div class="section">
@@ -20,28 +22,36 @@
       </div>
 
       <div class="section">
-        <h4>License and Usage Terms:</h4>
+        <h3>License and Usage Terms:</h3>
         <p><span>Copyright (c) 2021 Jeremy Carter &lt;jeremy@jeremycarter.ca&gt;</span></p>
         <p><span>GPL v2 (or newer) License:</span> <span>[ <a href="https://gitlab.com/defcronyke/kycaml-app/-/raw/master/LICENSE">GitLab Mirror</a> | <a href="https://raw.githubusercontent.com/defcronyke/kycaml-app/master/LICENSE">GitHub Mirror</a> ]</span></p>
-        <h5>*** NO WARRANTY, USE AT YOUR OWN RISK! ***</h5>
+        <h4>*** NO WARRANTY, USE AT YOUR OWN RISK! ***</h4>
       </div>
 
-      <div class="section">
-        <h4>Source Code:</h4>
-        <h5>Golang App</h5>
-        <span>GitLab:</span> <span><a href="https://gitlab.com/defcronyke/kycaml-app">https://gitlab.com/defcronyke/kycaml-app</a></span><br />
-        <span>GitHub:</span> <span><a href="https://github.com/defcronyke/kycaml-app">https://gitlab.com/defcronyke/kycaml-app</a></span><br />
+      <hr />
 
-        <h5>Golang Module</h5>
-        <span>GitLab:</span> <span><a href="https://gitlab.com/defcronyke/kycaml">https://gitlab.com/defcronyke/kycaml</a></span><br />
-        <span>GitHub:</span> <span><a href="https://github.com/defcronyke/kycaml">https://gitlab.com/defcronyke/kycaml</a></span><br />
+      <div class="section">
+        <h3>Source Code:</h3>
+        <h4>Golang App:</h4>
+        <ul>
+          <li><span>GitLab:</span> <span><a href="https://gitlab.com/defcronyke/kycaml-app">https://gitlab.com/defcronyke/kycaml-app</a></span></li>
+          <li><span>GitHub:</span> <span><a href="https://github.com/defcronyke/kycaml-app">https://gitlab.com/defcronyke/kycaml-app</a></span></li>
+        </ul>
+
+        <h4>Golang Module:</h4>
+        <ul>
+          <li><span>GitLab:</span> <span><a href="https://gitlab.com/defcronyke/kycaml">https://gitlab.com/defcronyke/kycaml</a></span></li>
+          <li><span>GitHub:</span> <span><a href="https://github.com/defcronyke/kycaml">https://gitlab.com/defcronyke/kycaml</a></span></li>
+        </ul>
       </div>
 
+      <hr />
+
       <div class="section">
-        <h4>Automated builds from the master branch</h4>
+        <h3>Automated builds from the master branch:</h3>
         <ul>
           <li>
-            <h5>Release Binary</h5>
+            <h4>Release Binary:</h4>
             <ul>
               <li><a href="https://gitlab.com/defcronyke/kycaml-app/-/jobs/artifacts/master/download?job=release-linux-x86_64">Linux x86_64 (GitLab mirror)</a></li>
               <li><a href="https://tinyurl.com/github-artifact?repo=defcronyke/kycaml-app&file=kycaml-app-release-linux-x86_64">Linux x86_64 (GitHub mirror)</a></li>
@@ -49,7 +59,7 @@
           </li>
 
           <li>
-            <h5>Debug Binary</h5>
+            <h4>Debug Binary:</h4>
             <ul>
               <li><a href="https://gitlab.com/defcronyke/kycaml-app/-/jobs/artifacts/master/download?job=debug-linux-x86_64">Linux x86_64 Debug (GitLab mirror)</a></li>
               <li><a href="https://tinyurl.com/github-artifact?repo=defcronyke/kycaml-app&file=kycaml-app-debug-linux-x86_64">Linux x86_64 Debug (GitHub mirror)</a></li>
@@ -57,7 +67,7 @@
           </li>
 
           <li>
-            <h5>NOTE: After downloading and extracting from the GitHub mirror, you need to run the following commands because GitHub Actions isn't preserving the correct permissions for the files:</h5>
+            <h4 style="width: 48em;">NOTE: After downloading and extracting from the GitHub mirror, you need to run the following commands because GitHub Actions isn't preserving the correct permissions for the files:</h4>
             <p>
             <pre style="background-color: black; color: white; font-size: medium; font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace; width: 48em; padding: 0.9em;">cd kycaml-app && \
 chmod 755 kycaml-app && \
@@ -66,10 +76,15 @@ chmod -R 755 cmd</pre>
             </p>
           </li>
         </ul>
+      </div>
 
+      <hr />
+
+      <div class="section">
+        <h3>How to compile from source:</h3>
         <ul>
           <li>
-            <h5>(Optional) Source Install:</h5>
+            <h4>Clone the git repositories, and build the source code:</h4>
             <p>
             <pre style="background-color: black; color: white; font-size: medium; font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace; width: 48em; padding: 0.9em;">git clone https://gitlab.com/defcronyke/kycaml.git; \
 git clone https://gitlab.com/defcronyke/kycaml-app.git; \
@@ -81,11 +96,13 @@ cd kycaml-app; \
         </ul>
       </div>
 
+      <hr />
+
       <div class="section">
-        <h4>Usage:</h4>
+        <h3>Usage:</h3>
         <ul>
           <li>
-            <span>Update the sanctions lists:</span>
+            <h4>Update the sanctions lists:</h4>
             <p>
             <pre style="background-color: black; color: white; font-size: medium; font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace; width: 48em; padding: 0.9em;">./get-lists.sh; \
 cd cmd/kycaml-sdn-json; \
@@ -100,42 +117,49 @@ cd ../..</pre>
 
         <ul>
           <li>
-            <span>Run the server:</span>
+            <h4>Run the server:</h4>
             <p>
             <pre style="background-color: black; color: white; font-size: medium; font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace; width: 48em; padding: 0.9em;"># Binary version
 ./kycaml-app
 
-# (Optional) Source version
+# Source version
 ./run.sh</pre>
             </p>
           </li>
         </ul>
 
+        <hr />
+
         <ul>
           <li>
-            <span>Website:</span>
+            <h4>Website:</h4>
             <ul>
+              <li><span>Local server:</span> <span><a href="http://127.0.0.1:3000">http://127.0.0.1:3000</a></span></li>
               <li><span>GitLab mirror:</span> <span><a href="https://defcronyke.gitlab.io/kycaml-app">https://defcronyke.gitlab.io/kycaml-app</a></span></li>
               <li><span>GitHub mirror:</span> <span><a href="https://defcronyke.github.io/kycaml-app">https://defcronyke.github.io/kycaml-app</a></span></li>
-              <li><span>Local server:</span> <span><a href="http://127.0.0.1:3000">http://127.0.0.1:3000</a></span></li>
             </ul>
           </li>
         </ul>
 
+        <hr />
+
         <ul>
           <li>
-            <span>Specially Designated Nationals And Blocked Persons (USA):</span> <span>[ <span><a href="sdn.json">JSON (experimental, local server only)</a></span> | <span><a href="sdn.xml">XML (local server only)</a></span> ]</span><br /><br />
+            <h4>Specially Designated Nationals And Blocked Persons (USA):</h4>
+            <span>[ <span><a href="sdn.json">JSON (experimental, local server only)</a></span> | <span><a href="sdn.xml">XML (local server only)</a></span> ]</span><br /><br />
             <span>From: <a href="https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-list-data-formats-data-schemas">https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-list-data-formats-data-schemas</a></span><br />
-            <span>-> SDN_ADVANCED.XML</span><br /><br />
+            <span>-> SDN_ADVANCED.XML</span><br />
           </li>
           <li>
-            <span>Consolidated Advanced Sanctions (USA):</span> <span>[ <span><a href="cons.json">JSON (experimental)</a></span> | <span><a href="cons.xml">XML</a></span> ]</span><br /><br />
+            <h4>Consolidated Advanced Sanctions (USA):</h4>
+            <span>[ <span><a href="cons.json">JSON (experimental)</a></span> | <span><a href="cons.xml">XML</a></span> ]</span><br /><br />
             <span>From: <a href="https://home.treasury.gov/policy-issues/financial-sanctions/consolidated-sanctions-list-non-sdn-lists">https://home.treasury.gov/policy-issues/financial-sanctions/consolidated-sanctions-list-non-sdn-lists</a></span><br />
             <span>-> CONS_ADVANCED.XML</span>
           </li>
         </ul>
       </div>
     </div>
+    <br />
   </div>
 </body>
 

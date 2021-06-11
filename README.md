@@ -51,7 +51,7 @@ chmod 755 get-lists.sh && \
 chmod -R 755 cmd
 ```
 
-### (Optional) Source Install
+## How to compile from source
 
 ```shell
 git clone https://gitlab.com/defcronyke/kycaml.git; \
@@ -83,15 +83,15 @@ cd ../..
 # Binary version
 ./kycaml-app
 
-# (Optional) Source version
+# Source version
 ./run.sh
 ```
 
 ### Website
 
+- Local server: [http://127.0.0.1:3000](http://127.0.0.1:3000)
 - GitLab mirror: [https://defcronyke.gitlab.io/kycaml-app](https://defcronyke.gitlab.io/kycaml-app)
 - GitHub mirror: [https://defcronyke.github.io/kycaml-app](https://defcronyke.github.io/kycaml-app)
-- Local server: [http://127.0.0.1:3000](http://127.0.0.1:3000)
 
 ### Specially Designated Nationals And Blocked Persons (USA)
 
