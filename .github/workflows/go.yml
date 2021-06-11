@@ -1,0 +1,84 @@
+name: github-pipeline
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+  workflow_dispatch:
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  debug-linux-x86_64:
+    # needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: debug-linux-x86_64
+        run: |
+          apt-get update && apt-get upgrade -y && apt-get dist-upgrade -y && apt-get autoremove -y && apt-get install -y rsync upx # Install OS updates.
+          mkdir kycaml-app && mv * kycaml-app/ || true
+          git clone https://gitlab.com/defcronyke/kycaml.git
+          cd kycaml-app
+          go version # Display golang version.
+          ls -al
+          go get
+          go build -o main
+          ls -al
+          mkdir -p kycaml-app/kycaml-app
+          cp main kycaml-app/kycaml-app/kycaml-app
+          cp -r public/ kycaml-app/kycaml-app/static/
+          cp get-lists.sh kycaml-app/kycaml-app/
+          chmod 755 kycaml-app/kycaml-app/kycaml-app
+          ./build-cmd.sh
+          rsync -av --exclude={'*.go','*.sh'} cmd/ kycaml-app/kycaml-app/cmd/
+          cd ..
+          mv kycaml-app kycaml-app-src
+          mv kycaml-app-src/kycaml-app kycaml-app
+
+      - name: kycaml-app-debug-linux-x86_64
+        uses: actions/upload-artifact@v2
+        with:
+          name: kycaml-app-debug-linux-x86_64
+          path: |
+            kycaml-app
+
+  release-linux-x86_64:
+    # needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: release-linux-x86_64
+        run: |
+          apt-get update && apt-get upgrade -y && apt-get dist-upgrade -y && apt-get autoremove -y && apt-get install -y rsync upx # Install OS updates.
+          mkdir kycaml-app && mv * kycaml-app/ || true
+          git clone https://gitlab.com/defcronyke/kycaml.git
+          cd kycaml-app
+          go version # Display golang version.
+          ls -al
+          go get
+          go build -o main -ldflags="-s -w"
+          upx --brute main
+          ls -al
+          mkdir -p kycaml-app/kycaml-app
+          cp main kycaml-app/kycaml-app/kycaml-app
+          cp -r public/ kycaml-app/kycaml-app/static/
+          cp get-lists.sh kycaml-app/kycaml-app/
+          chmod 755 kycaml-app/kycaml-app/kycaml-app
+          ./build-cmd.sh
+          rsync -av --exclude={'*.go','*.sh'} cmd/ kycaml-app/kycaml-app/cmd/
+          cd ..
+          mv kycaml-app kycaml-app-src
+          mv kycaml-app-src/kycaml-app kycaml-app
+
+      - name: kycaml-app-release-linux-x86_64
+        uses: actions/upload-artifact@v2
+        with:
+          name: kycaml-app-release-linux-x86_64
+          path: |
+            kycaml-app

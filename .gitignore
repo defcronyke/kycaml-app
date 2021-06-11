@@ -25,8 +25,6 @@ docs/sdn.xml
 public/sdn.json
 public/sdn.xml
 
-.github/workflows/go.yml
-
 *.upx
 
 go.sum
