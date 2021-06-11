@@ -56,6 +56,13 @@
           </li>
         </ul>
 
+        <h5>NOTE: After downloading and extracting from the GitHub mirror, you need to run the following commands because GitHub Actions isn't preserving the correct permissions for the files:</h5>
+        <p>
+        <pre style="background-color: black; color: white; font-size: medium; font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace; width: 48em; padding: 0.9em;">cd kycaml-app && \
+chmod 755 kycaml-app && \
+chmod -R 755 cmd</pre>
+        </p>
+
         <ul>
           <li>
             <h5>(Optional) Source Install:</h5>
@@ -64,8 +71,7 @@
 git clone https://gitlab.com/defcronyke/kycaml-app.git; \
 cd kycaml-app; \
 ./get-lists.sh; \
-./build-cmd.sh
-</pre>
+./build-cmd.sh</pre>
             </p>
           </li>
         </ul>

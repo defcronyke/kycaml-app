@@ -45,7 +45,9 @@ MIT License: [GitLab Mirror](https://gitlab.com/defcronyke/kycaml-app/-/raw/mast
 NOTE: After downloading and extracting from the GitHub mirror, you need to run the following commands because GitHub Actions isn't preserving the correct permissions for the files:
 
 ```shell
-cd kycaml-app && chmod 755 *
+cd kycaml-app && \
+chmod 755 kycaml-app && \
+chmod -R 755 cmd
 ```
 
 ### (Optional) Source Install
