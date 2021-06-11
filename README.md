@@ -2,7 +2,17 @@
 
 ## NO WARRANTY, USE AT YOUR OWN RISK
 
-[![pipeline status gitlab](https://gitlab.com/defcronyke/kycaml-app/badges/master/pipeline.svg)](https://gitlab.com/defcronyke/kycaml-app/-/pipelines) [![sponsor the project](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&link=https://github.com/sponsors/defcronyke)](https://github.com/sponsors/defcronyke)
+[![pipeline status gitlab](https://gitlab.com/defcronyke/kycaml-app/badges/master/pipeline.svg)](https://gitlab.com/defcronyke/kycaml-app/-/pipelines) [![github-pipeline](https://github.com/defcronyke/kycaml-app/workflows/github-pipeline/badge.svg)](https://github.com/defcronyke/kycaml-app/actions) [![sponsor the project](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&link=https://github.com/sponsors/defcronyke)](https://github.com/sponsors/defcronyke)
+
+---
+
+## License and Usage Terms
+
+Copyright (c) 2021 `Jeremy Carter <jeremy@jeremycarter.ca>`
+
+MIT License: [GitLab Mirror](https://gitlab.com/defcronyke/kycaml-app/-/raw/master/LICENSE) | [GitHub Mirror](https://raw.githubusercontent.com/defcronyke/kycaml-app/master/LICENSE)
+
+`*** NO WARRANTY, USE AT YOUR OWN RISK! ***`
 
 ---
 
@@ -20,29 +30,45 @@
 
 ---
 
-## License and Usage Terms
+## Automated builds from the master branch
 
-Copyright (c) 2021 `Jeremy Carter <jeremy@jeremycarter.ca>`
+### Release Binary
 
-MIT License: [GitLab Mirror](https://gitlab.com/defcronyke/kycaml-app/-/raw/master/LICENSE) | [GitHub Mirror](https://raw.githubusercontent.com/defcronyke/kycaml-app/master/LICENSE)
+- [Linux x86_64 (GitLab mirror)](https://gitlab.com/defcronyke/kycaml-app/-/jobs/artifacts/master/download?job=release-linux-x86_64)
+- [Linux x86_64 (GitHub mirror)](https://tinyurl.com/github-artifact?repo=defcronyke/kycaml-app&file=kycaml-app-release-linux-x86_64)
 
-`*** NO WARRANTY, USE AT YOUR OWN RISK! ***`
+### Debug Binary
+
+- [Linux x86_64 Debug (GitLab mirror)](https://gitlab.com/defcronyke/kycaml-app/-/jobs/artifacts/master/download?job=debug-linux-x86_64)
+- [Linux x86_64 Debug (GitHub mirror)](https://tinyurl.com/github-artifact?repo=defcronyke/kycaml-app&file=kycaml-app-debug-linux-x86_64)
+
+NOTE: After downloading and extracting from the GitHub mirror, you need to run the following commands because GitHub Actions isn't preserving the correct permissions for the files:
+
+```shell
+cd kycaml-app && chmod 755 *
+```
+
+### (Optional) Source Install
+
+```shell
+git clone https://gitlab.com/defcronyke/kycaml.git; \
+git clone https://gitlab.com/defcronyke/kycaml-app.git; \
+cd kycaml-app; \
+./get-lists.sh; \
+./build-cmd.sh
+```
 
 ---
 
 ## Usage
 
-### Install
-
-```shell
-git clone https://gitlab.com/defcronyke/kycaml.git; \
-git clone https://gitlab.com/defcronyke/kycaml-app.git; \
-cd kycaml-app
-```
-
 ### Run the server
 
 ```shell
+# Binary version
+./kycaml-app
+
+# (Optional) Source version
 ./run.sh
 ```
 

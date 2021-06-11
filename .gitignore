@@ -27,5 +27,7 @@ public/sdn.xml
 
 .github/workflows/go.yml
 
+*.upx
+
 go.sum
 kycaml-app
