@@ -47,6 +47,7 @@ NOTE: After downloading and extracting from the GitHub mirror, you need to run t
 ```shell
 cd kycaml-app && \
 chmod 755 kycaml-app && \
+chmod 755 get-lists.sh && \
 chmod -R 755 cmd
 ```
 
