@@ -49,6 +49,8 @@ jobs:
           cp main kycaml-app/kycaml-app/kycaml-app
           cp -r public/ kycaml-app/kycaml-app/static/
           cp get-lists.sh kycaml-app/kycaml-app/
+          cp LICENSE kycaml-app/kycaml-app/
+          cp README.md kycaml-app/kycaml-app/
           chmod 755 kycaml-app/kycaml-app/kycaml-app
           ./build-cmd.sh
           rsync -av --exclude={'*.go','*.sh'} cmd/ kycaml-app/kycaml-app/cmd/
@@ -85,6 +87,8 @@ jobs:
           cp main kycaml-app/kycaml-app/kycaml-app
           cp -r public/ kycaml-app/kycaml-app/static/
           cp get-lists.sh kycaml-app/kycaml-app/
+          cp LICENSE kycaml-app/kycaml-app/
+          cp README.md kycaml-app/kycaml-app/
           chmod 755 kycaml-app/kycaml-app/kycaml-app
           ./build-cmd.sh
           rsync -av --exclude={'*.go','*.sh'} cmd/ kycaml-app/kycaml-app/cmd/

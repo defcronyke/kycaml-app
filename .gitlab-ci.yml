@@ -55,6 +55,8 @@ debug-linux-x86_64:
     - cp main kycaml-app/kycaml-app
     - cp -r public/ kycaml-app/static/
     - cp get-lists.sh kycaml-app/
+    - cp LICENSE kycaml-app/
+    - cp README.md kycaml-app/
     - chmod 755 kycaml-app/kycaml-app
     - ./build-cmd.sh
     - rsync -av --exclude={'*.go','*.sh'} cmd/ kycaml-app/cmd/
@@ -89,6 +91,8 @@ release-linux-x86_64:
     - cp main kycaml-app/kycaml-app
     - cp -r public/ kycaml-app/static/
     - cp get-lists.sh kycaml-app/
+    - cp LICENSE kycaml-app/
+    - cp README.md kycaml-app/
     - chmod 755 kycaml-app/kycaml-app
     - ./build-cmd.sh
     - rsync -av --exclude={'*.go','*.sh'} cmd/ kycaml-app/cmd/
