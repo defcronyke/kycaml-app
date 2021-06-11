@@ -56,14 +56,19 @@ chmod -R 755 cmd
 ```shell
 git clone https://gitlab.com/defcronyke/kycaml.git; \
 git clone https://gitlab.com/defcronyke/kycaml-app.git; \
-cd kycaml-app; \
-./get-lists.sh; \
-./build-cmd.sh
+cd kycaml-app
 ```
 
 ---
 
 ## Usage
+
+### Update the lists and build the commands
+
+```shell
+./get-lists.sh; \
+./build-cmd.sh
+```
 
 ### Run the server
 
