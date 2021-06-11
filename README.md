@@ -10,7 +10,7 @@
 
 Copyright (c) 2021 `Jeremy Carter <jeremy@jeremycarter.ca>`
 
-MIT License: [GitLab Mirror](https://gitlab.com/defcronyke/kycaml-app/-/raw/master/LICENSE) | [GitHub Mirror](https://raw.githubusercontent.com/defcronyke/kycaml-app/master/LICENSE)
+GPL v2 (or newer) License: [GitLab Mirror](https://gitlab.com/defcronyke/kycaml-app/-/raw/master/LICENSE) | [GitHub Mirror](https://raw.githubusercontent.com/defcronyke/kycaml-app/master/LICENSE)
 
 `*** NO WARRANTY, USE AT YOUR OWN RISK! ***`
 
