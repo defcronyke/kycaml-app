@@ -18,10 +18,17 @@ KYCAML_APP_CMD_DIRS=(
 	"kycaml-sw"
 )
 
+pwd="$PWD"
+
+cd ../kycaml
+go get
+cd "$pwd"
+go get
+
 for dir in ${KYCAML_APP_CMD_DIRS[@]}; do
-	cd cmd/"$dir" && \
-	echo "building: $dir" && \
-	go build -ldflags="-s -w" && \
-	upx --brute "$dir" && \
+	cd cmd/"$dir"; \
+	echo "building: $dir"; \
+	go build -ldflags="-s -w"; \
+	upx --brute "$dir"; \
 	cd ../..
 done
