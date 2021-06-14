@@ -15,33 +15,4 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-# Install the "fresh" utility by running this command
-# outside of this project's directory somewhere:
-# go get github.com/pilu/fresh && go install github.com/pilu/fresh
-
-kycaml_up() {
-  rsync --exclude .git -av ../kycaml/ ./.kycaml/
-
-  if [ $# -gt 0 ]; then
-    # Rebuild containers: ./up.sh -b
-    if [ "$1" == "-b" ]; then
-      ./build-container.sh
-      build_res=$?
-
-      if [ $build_res -ne 0 ]; then
-        echo "error: build failed: exit code: $build_res"
-        return $build_res
-      fi
-    fi
-  fi
-
-  docker network create kycaml || true
-
-  docker-compose up -d && \
-  ./logs.sh || \
-  ./build-container.sh && \
-  docker-compose up -d && \
-  ./logs.sh
-}
-
-kycaml_up "$@"
+docker exec -it kycaml-app_kycaml_1 /bin/bash
