@@ -53,12 +53,14 @@ func main() {
 
 	r := mux.NewRouter()
 
+	r.HandleFunc("/usa/names", k.NamesHandler)
 	r.HandleFunc("/usa/sdn", k.USASdnJSONHandler)
 	r.HandleFunc("/usa/cons", k.USAConsJSONHandler)
+	r.HandleFunc("/usa/score", k.ScoreHandler)
 
+	r.HandleFunc("/names", k.NamesHandler)
 	r.HandleFunc("/sdn", k.USASdnJSONHandler)
 	r.HandleFunc("/cons", k.USAConsJSONHandler)
-
 	r.HandleFunc("/score", k.ScoreHandler)
 
 	r.PathPrefix("/usa/").Handler(http.StripPrefix("/usa/", http.FileServer(http.Dir(staticDir))))

@@ -71,7 +71,7 @@
             <p>
             <pre style="background-color: black; color: white; font-size: medium; font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace; width: 48em; padding: 0.9em;">cd kycaml-app && \
 chmod 755 kycaml-app && \
-chmod 755 get-lists.sh && \
+chmod 755 *.sh && \
 chmod -R 755 cmd</pre>
             </p>
           </li>
@@ -89,7 +89,6 @@ chmod -R 755 cmd</pre>
             <pre style="background-color: black; color: white; font-size: medium; font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace; width: 48em; padding: 0.9em;">git clone https://gitlab.com/defcronyke/kycaml.git; \
 git clone https://gitlab.com/defcronyke/kycaml-app.git; \
 cd kycaml-app; \
-./build-cmd.sh; \
 ./build.sh</pre>
             </p>
           </li>
@@ -104,13 +103,7 @@ cd kycaml-app; \
           <li>
             <h4>Update the sanctions lists:</h4>
             <p>
-            <pre style="background-color: black; color: white; font-size: medium; font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace; width: 48em; padding: 0.9em;">./get-lists.sh; \
-cd cmd/kycaml-sdn-json; \
-./kycaml-sdn-json | tee ../../static/sdn.json >/dev/null; \
-cd ../..; \
-cd cmd/kycaml-cons-json; \
-./kycaml-cons-json | tee ../../static/cons.json >/dev/null; \
-cd ../..</pre>
+            <pre style="background-color: black; color: white; font-size: medium; font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace; width: 48em; padding: 0.9em;">./update-lists.sh</pre>
             </p>
           </li>
         </ul>
@@ -123,7 +116,19 @@ cd ../..</pre>
 ./kycaml-app
 
 # Source version
-./run.sh</pre>
+./run.sh
+
+# Source version (Docker with MongoDB)
+./up.sh
+
+# Stop source version (Docker with MongoDB)
+./down.sh
+
+# Rebuild docker container and run
+./up.sh -b
+
+# Rebuild docker container
+./build-container.sh</pre>
             </p>
           </li>
         </ul>
@@ -135,10 +140,30 @@ cd ../..</pre>
             <h4>Website:</h4>
             <ul>
               <li><span>Local server:</span> <span><a href="http://127.0.0.1:3000">http://127.0.0.1:3000</a></span></li>
+              <li><span>Local server (Docker):</span> <span><a href="http://127.0.0.1:8080">http://127.0.0.1:8080</a></span></li>
               <li><span>GitLab mirror:</span> <span><a href="https://defcronyke.gitlab.io/kycaml-app">https://defcronyke.gitlab.io/kycaml-app</a></span></li>
               <li><span>GitHub mirror:</span> <span><a href="https://defcronyke.github.io/kycaml-app">https://defcronyke.github.io/kycaml-app</a></span></li>
             </ul>
           </li>
+        </ul>
+
+        <hr />
+
+        <ul>
+          <li>
+            <h4>API:</h4>
+            <ul>
+              <li>
+                <span>GET /names</span>
+                <ul>
+                  <li><a href="http://127.0.0.1:3000/names">http://127.0.0.1:3000/names</a></li>
+                  <li><a href="http://127.0.0.1:8080/names">http://127.0.0.1:8080/names</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        </li>
         </ul>
 
         <hr />

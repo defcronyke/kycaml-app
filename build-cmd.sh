@@ -18,7 +18,11 @@
 # NOTE: Install the `upx` utility first before running this.
 
 KYCAML_APP_CMD_DIRS=(
-	"kycaml-cons-json"
+	"kycaml-sdn-json"
+  "kycaml-cons-json"
+	"kycaml-sdn-names"
+  "kycaml-cons-names"
+  "kycaml-names"
 	"kycaml-dl"
 	"kycaml-dm"
 	"kycaml-h"
@@ -30,7 +34,6 @@ KYCAML_APP_CMD_DIRS=(
 	"kycaml-o"
 	"kycaml-p"
 	"kycaml-s"
-	"kycaml-sdn-json"
 	"kycaml-sw"
 )
 

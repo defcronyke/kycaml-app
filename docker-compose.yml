@@ -1,0 +1,32 @@
+version: '3.7'
+services:
+
+  mongodb:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+    env_file:
+      # NOTE: Create a file named `mongo.env` with the db password 
+      # in it, like this:
+      # MONGO_INITDB_ROOT_PASSWORD=SomeUniquePassword56445aawe
+      - ./mongo.env
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb_data:/data/db
+  
+  kycaml:
+    build: .
+    environment:
+      HOST: 0.0.0.0
+      PORT: 8080
+    ports:
+      - "8080:8080"
+
+volumes:
+  mongodb_data:
+
+networks:
+  default:
+    name: kycaml
+    external: true

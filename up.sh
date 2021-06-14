@@ -1,3 +1,4 @@
+#!/bin/bash
 # Copyright (C) 2021  Jeremy Carter <jeremy@jeremycarter.ca>
 #
 # This program is free software; you can redistribute it and/or modify
@@ -14,40 +15,33 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-tmp/
-.vscode/
+# Install the "fresh" utility by running this command
+# outside of this project's directory somewhere:
+# go get github.com/pilu/fresh && go install github.com/pilu/fresh
 
-cmd/kycaml-sdn-json/kycaml-sdn-json
-cmd/kycaml-sdn-names/kycaml-sdn-names
-cmd/kycaml-cons-json/kycaml-cons-json
-cmd/kycaml-cons-names/kycaml-cons-names
-cmd/kycaml-names/kycaml-names
-cmd/kycaml-dl/kycaml-dl
-cmd/kycaml-dm/kycaml-dm
-cmd/kycaml-h/kycaml-h
-cmd/kycaml-j/kycaml-j
-cmd/kycaml-jw/kycaml-jw
-cmd/kycaml-l/kycaml-l
-cmd/kycaml-lcs/kycaml-lcs
-cmd/kycaml-n/kycaml-n
-cmd/kycaml-o/kycaml-o
-cmd/kycaml-p/kycaml-p
-cmd/kycaml-s/kycaml-s
-cmd/kycaml-sw/kycaml-sw
+kycaml_up() {
+  rsync -av ../kycaml/ ./.kycaml/
 
-static/*.xml
-static/*.json
+  if [ $# -gt 0 ]; then
+    # Rebuild containers: ./up.sh -b
+    if [ "$1" == "-b" ]; then
+      ./build-container.sh
+      build_res=$?
 
-docs/sdn.json
-docs/sdn.xml
+      if [ $build_res -ne 0 ]; then
+        echo "error: build failed: exit code: $build_res"
+        return $build_res
+      fi
+    fi
+  fi
 
-public/sdn.json
-public/sdn.xml
+  docker network create kycaml || true
 
-.kycaml/
+  docker-compose up -d && \
+  ./logs.sh || \
+  ./build-container.sh && \
+  docker-compose up -d && \
+  ./logs.sh
+}
 
-*.upx
-
-mongo.env
-go.sum
-kycaml-app
+kycaml_up "$@"

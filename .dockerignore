@@ -1,0 +1,6 @@
+.github/
+.vscode/
+cmd/
+docs/
+public/
+tmp/

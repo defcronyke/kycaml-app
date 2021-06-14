@@ -47,7 +47,7 @@ NOTE: After downloading and extracting from the GitHub mirror, you need to run t
 ```shell
 cd kycaml-app && \
 chmod 755 kycaml-app && \
-chmod 755 get-lists.sh && \
+chmod 755 *.sh && \
 chmod -R 755 cmd
 ```
 
@@ -57,7 +57,6 @@ chmod -R 755 cmd
 git clone https://gitlab.com/defcronyke/kycaml.git; \
 git clone https://gitlab.com/defcronyke/kycaml-app.git; \
 cd kycaml-app; \
-./build-cmd.sh; \
 ./build.sh
 ```
 
@@ -68,13 +67,7 @@ cd kycaml-app; \
 ### Update the sanctions lists
 
 ```shell
-./get-lists.sh; \
-cd cmd/kycaml-sdn-json; \
-./kycaml-sdn-json | tee ../../static/sdn.json >/dev/null; \
-cd ../..; \
-cd cmd/kycaml-cons-json; \
-./kycaml-cons-json | tee ../../static/cons.json >/dev/null; \
-cd ../..
+./update-lists.sh
 ```
 
 ### Run the server
@@ -85,13 +78,32 @@ cd ../..
 
 # Source version
 ./run.sh
+
+# Source version (Docker with MongoDB)
+./up.sh
+
+# Stop source version (Docker with MongoDB)
+./down.sh
+
+# Rebuild docker container and run
+./up.sh -b
+
+# Rebuild docker container
+./build-container.sh
 ```
 
 ### Website
 
 - Local server: [http://127.0.0.1:3000](http://127.0.0.1:3000)
+- Local server (Docker): [http://127.0.0.1:8080](http://127.0.0.1:8080)
 - GitLab mirror: [https://defcronyke.gitlab.io/kycaml-app](https://defcronyke.gitlab.io/kycaml-app)
 - GitHub mirror: [https://defcronyke.github.io/kycaml-app](https://defcronyke.github.io/kycaml-app)
+
+### API
+
+- GET /names
+  - [http://127.0.0.1:3000/names](http://127.0.0.1:3000/names)
+  - [http://127.0.0.1:8080/names](http://127.0.0.1:8080/names)
 
 ### Specially Designated Nationals And Blocked Persons (USA)
 

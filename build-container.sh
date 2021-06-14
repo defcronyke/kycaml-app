@@ -1,3 +1,4 @@
+#!/bin/bash
 # Copyright (C) 2021  Jeremy Carter <jeremy@jeremycarter.ca>
 #
 # This program is free software; you can redistribute it and/or modify
@@ -14,40 +15,9 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-tmp/
-.vscode/
+# NOTE: Make sure to run this command at least once first:
+# ./update-lists.sh
 
-cmd/kycaml-sdn-json/kycaml-sdn-json
-cmd/kycaml-sdn-names/kycaml-sdn-names
-cmd/kycaml-cons-json/kycaml-cons-json
-cmd/kycaml-cons-names/kycaml-cons-names
-cmd/kycaml-names/kycaml-names
-cmd/kycaml-dl/kycaml-dl
-cmd/kycaml-dm/kycaml-dm
-cmd/kycaml-h/kycaml-h
-cmd/kycaml-j/kycaml-j
-cmd/kycaml-jw/kycaml-jw
-cmd/kycaml-l/kycaml-l
-cmd/kycaml-lcs/kycaml-lcs
-cmd/kycaml-n/kycaml-n
-cmd/kycaml-o/kycaml-o
-cmd/kycaml-p/kycaml-p
-cmd/kycaml-s/kycaml-s
-cmd/kycaml-sw/kycaml-sw
+docker network create kycaml || true
 
-static/*.xml
-static/*.json
-
-docs/sdn.json
-docs/sdn.xml
-
-public/sdn.json
-public/sdn.xml
-
-.kycaml/
-
-*.upx
-
-mongo.env
-go.sum
-kycaml-app
+docker-compose build

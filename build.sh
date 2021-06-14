@@ -21,10 +21,5 @@
 #
 # NOTE: Install the "upx" utility first before running this.
 
-pwd="$PWD"; \
-cd ../kycaml; \
-go get; \
-cd "$pwd"; \
-go get; \
-go build -ldflags="-s -w"; \
-upx --brute kycaml-app
+./build-cmd.sh; \
+./build-app.sh
