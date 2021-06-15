@@ -111,9 +111,9 @@ cd kycaml-app; \
 
 ### Specially Designated Nationals And Blocked Persons (USA)
 
-- JSON (experimental, local server only):
+- JSON (experimental, not available in demo):
   - [http://127.0.0.1:3000/sdn.json](http://127.0.0.1:3000/sdn.json)
-- XML (local server only):
+- XML (not available in demo):
   - [http://127.0.0.1:3000/sdn.xml](http://127.0.0.1:3000/sdn.xml)
 - From:
   - [https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-list-data-formats-data-schemas](https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-list-data-formats-data-schemas)  
