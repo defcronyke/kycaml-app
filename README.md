@@ -114,6 +114,8 @@ cd kycaml-app; \
 - JSON (unofficial format):
   - [https://kycaml.saladfinder.com/sdn](https://kycaml.saladfinder.com/sdn) (mirror 1)
   - [https://kycaml.cryptospread.com/sdn](https://kycaml.cryptospread.com/sdn) (mirror 2)
+  - [http://127.0.0.1:3000/sdn](http://127.0.0.1:3000/sdn) (local)
+  - [http://127.0.0.1:8080/sdn](http://127.0.0.1:8080/sdn) (Docker)
 - XML (local version only):
   - [http://127.0.0.1:3000/sdn.xml](http://127.0.0.1:3000/sdn.xml) (local)
   - [http://127.0.0.1:8080/sdn.xml](http://127.0.0.1:8080/sdn.xml) (Docker)
