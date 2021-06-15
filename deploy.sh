@@ -27,8 +27,8 @@ gcloud beta run deploy kycaml \
   --cpu 1 \
   --min-instances 0 \
   --max-instances 32 \
-  --memory 512Mi \
-  --timeout 300 \
+  --memory 1Gi \
+  --timeout 600 \
   --ingress all \
   --allow-unauthenticated \
   --no-use-http2
