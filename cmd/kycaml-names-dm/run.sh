@@ -15,16 +15,12 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-# NOTE: Install the "fresh" utility by running this command
-# outside of this project's directory somewhere:
-# go get github.com/pilu/fresh && go install github.com/pilu/fresh
-#
-# NOTE: Install the "upx" utility first before running this.
+pwd="$PWD"
 
-pwd="$PWD"; \
-cd ../kycaml; \
+cd ../..; \
 go get; \
-cd "$pwd"; \
-go get; \
-go build -ldflags="-s -w"; \
-upx kycaml-app
+cd "$pwd"
+
+go build && \
+./kycaml-names-dm; \
+cd "$pwd"

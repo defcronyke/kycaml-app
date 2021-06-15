@@ -17,26 +17,6 @@
 
 # NOTE: Install the `upx` utility first before running this.
 
-KYCAML_APP_CMD_DIRS=(
-	"kycaml-sdn-json"
-  "kycaml-cons-json"
-	"kycaml-sdn-names"
-  "kycaml-cons-names"
-  "kycaml-names"
-	"kycaml-dl"
-	"kycaml-dm"
-	"kycaml-h"
-	"kycaml-j"
-	"kycaml-jw"
-	"kycaml-l"
-	"kycaml-lcs"
-	"kycaml-n"
-	"kycaml-o"
-	"kycaml-p"
-	"kycaml-s"
-	"kycaml-sw"
-)
-
 pwd="$PWD"
 
 cd ../kycaml; \
@@ -44,10 +24,14 @@ go get; \
 cd "$pwd"; \
 go get
 
-for dir in ${KYCAML_APP_CMD_DIRS[@]}; do
-	cd cmd/"$dir"; \
+cd cmd
+
+for dir in `ls -ad1 *`; do
+	cd "$dir"; \
 	echo "building: $dir"; \
 	go build -ldflags="-s -w"; \
-	upx --brute "$dir"; \
-	cd "$pwd"
+	upx "$dir"; \
+  cd ..
 done
+
+cd "$pwd"
