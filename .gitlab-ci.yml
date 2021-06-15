@@ -33,7 +33,7 @@ stages:
   - debug-windows-x86_64
   - release-linux-x86_64
   - release-windows-x86_64
-  - pages
+  - deploy
 
 # Pipeline "debug-linux-x86_64" stage
 debug-linux-x86_64:
