@@ -104,10 +104,10 @@ cd kycaml-app; \
 ### API
 
 - GET /names
-  - Online (mirror 1): [https://kycaml.saladfinder.com/names](https://kycaml.saladfinder.com/names)
-  - Online (mirror 2): [https://kycaml.cryptospread.com/names](https://kycaml.cryptospread.com/names)
-  - Local: [http://127.0.0.1:3000/names](http://127.0.0.1:3000/names)
-  - Docker: [http://127.0.0.1:8080/names](http://127.0.0.1:8080/names)
+  - [https://kycaml.saladfinder.com/names](https://kycaml.saladfinder.com/names) (mirror 1)
+  - [https://kycaml.cryptospread.com/names](https://kycaml.cryptospread.com/names) (mirror 2)
+  - [http://127.0.0.1:3000/names](http://127.0.0.1:3000/names) (local)
+  - [http://127.0.0.1:8080/names](http://127.0.0.1:8080/names) (Docker)
 
 ### Specially Designated Nationals And Blocked Persons (USA)
 
@@ -126,6 +126,8 @@ cd kycaml-app; \
 - JSON (unofficial format):
   - [https://kycaml.saladfinder.com/cons](https://kycaml.saladfinder.com/cons) (mirror 1)
   - [https://kycaml.cryptospread.com/cons](https://kycaml.cryptospread.com/cons) (mirror 2)
+  - [http://127.0.0.1:3000/cons](http://127.0.0.1:3000/cons) (local)
+  - [http://127.0.0.1:8080/cons](http://127.0.0.1:8080/cons) (Docker)
 - XML:
   - [https://kycaml.saladfinder.com/cons.xml](https://kycaml.saladfinder.com/cons.xml) (mirror 1)
   - [https://kycaml.cryptospread.com/cons.xml](https://kycaml.cryptospread.com/cons.xml) (mirror 2)
