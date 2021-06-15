@@ -112,9 +112,10 @@ cd kycaml-app; \
 ### Specially Designated Nationals And Blocked Persons (USA)
 
 - JSON (unofficial format):
-  - [https://kycaml.saladfinder.com/sdn.json](https://kycaml.saladfinder.com/sdn.json)
-- XML:
-  - [https://kycaml.saladfinder.com/sdn.xml](https://kycaml.saladfinder.com/sdn.xml)
+  - [https://kycaml.saladfinder.com/sdn](https://kycaml.saladfinder.com/sdn)
+- XML (local version only):
+  - [http://127.0.0.1:3000/sdn.xml](http://127.0.0.1:3000/sdn.xml) (local)
+  - [http://127.0.0.1:8080/sdn.xml](http://127.0.0.1:8080/sdn.xml) (Docker)
 - From:
   - [https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-list-data-formats-data-schemas](https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-list-data-formats-data-schemas)  
     `-> SDN_ADVANCED.XML`
@@ -122,9 +123,11 @@ cd kycaml-app; \
 ### Consolidated Advanced Sanctions (USA)
 
 - JSON (unofficial format):
-  - [https://kycaml.saladfinder.com/cons.json](https://kycaml.saladfinder.com/cons.json)
+  - [https://kycaml.saladfinder.com/cons](https://kycaml.saladfinder.com/cons)
 - XML:
   - [https://kycaml.saladfinder.com/cons.xml](https://kycaml.saladfinder.com/cons.xml)
+  - [http://127.0.0.1:3000/cons.xml](http://127.0.0.1:3000/cons.xml) (local)
+  - [http://127.0.0.1:8080/cons.xml](http://127.0.0.1:8080/cons.xml) (Docker)
 - From:
   - [https://home.treasury.gov/policy-issues/financial-sanctions/consolidated-sanctions-list-non-sdn-lists](https://home.treasury.gov/policy-issues/financial-sanctions/consolidated-sanctions-list-non-sdn-lists)  
     `-> CONS_ADVANCED.XML`
