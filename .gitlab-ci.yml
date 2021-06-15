@@ -87,7 +87,7 @@ release-linux-x86_64:
     - ls -al
     - go get
     - go build -o main -ldflags="-s -w"
-    - upx --brute main
+    - upx main
     - ls -al
     - mkdir -p kycaml-app
     - cp main kycaml-app/kycaml-app
