@@ -34,8 +34,8 @@ func main() {
 
 	log.Printf("%v", k.InitMsg())
 
-	host_default := "127.0.0.1"
-	port_default := "3000"
+	host_default := "0.0.0.0"
+	port_default := "8080"
 
 	host := os.Getenv("HOST")
 	if host == "" {

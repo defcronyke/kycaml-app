@@ -40,14 +40,14 @@ git_commit_push() {
   go build; \
   git add . && \
   git commit -m "$msg" && \
-  git push; \
+  git push -u all master; \
   cd "$pwd"
 
   go get; \
   go build; \
   git add . && \
   git commit -m "$msg" && \
-  git push
+  git push -u all master
 }
 
 git_commit_push "$@"

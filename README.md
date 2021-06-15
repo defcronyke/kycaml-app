@@ -16,6 +16,13 @@ GPL v2 (or newer) License: [GitLab Mirror](https://gitlab.com/defcronyke/kycaml-
 
 ---
 
+### Website
+
+- GitLab mirror: [https://defcronyke.gitlab.io/kycaml-app](https://defcronyke.gitlab.io/kycaml-app)
+- GitHub mirror: [https://defcronyke.github.io/kycaml-app](https://defcronyke.github.io/kycaml-app)
+- Local server: [http://127.0.0.1:3000](http://127.0.0.1:3000)
+- Local server (Docker): [http://127.0.0.1:8080](http://127.0.0.1:8080)
+
 ## Source Code
 
 ### Golang App
@@ -73,31 +80,24 @@ cd kycaml-app; \
 ### Run the server
 
 ```shell
-# Binary version
+# Binary version:
 ./kycaml-app
 
-# Source version
+# Source version:
 ./run.sh
 
-# Source version (Docker with MongoDB)
+# Docker version (docker-compose with MongoDB):
 ./up.sh
 
-# Stop source version (Docker with MongoDB)
+# Stop Docker version (docker-compose with MongoDB):
 ./down.sh
 
-# Rebuild docker container and run
+# Rebuild Docker version and run:
 ./up.sh -b
 
-# Rebuild docker container
+# Rebuild Docker version:
 ./build-container.sh
 ```
-
-### Website
-
-- Local server: [http://127.0.0.1:3000](http://127.0.0.1:3000)
-- Local server (Docker): [http://127.0.0.1:8080](http://127.0.0.1:8080)
-- GitLab mirror: [https://defcronyke.gitlab.io/kycaml-app](https://defcronyke.gitlab.io/kycaml-app)
-- GitHub mirror: [https://defcronyke.github.io/kycaml-app](https://defcronyke.github.io/kycaml-app)
 
 ### API
 

@@ -21,3 +21,5 @@
 docker network create kycaml || true
 
 docker-compose build
+
+docker tag kycaml-app_kycaml:latest gcr.io/kycaml-app/kycaml-app:latest

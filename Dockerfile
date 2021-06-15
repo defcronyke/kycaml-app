@@ -19,11 +19,6 @@ RUN ./build.sh && \
 	echo $PWD && \
 	ls -al
 
-# ENTRYPOINT ./kycaml-app
-
-# Set the port with the $PORT env var. 
-# Port 8080 is the default.
-# EXPOSE 8080
 
 FROM debian:buster-slim
 
@@ -43,3 +38,5 @@ RUN echo $PWD && \
 	ls -al
 
 ENTRYPOINT ./kycaml-app
+
+EXPOSE 8080

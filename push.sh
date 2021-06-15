@@ -15,23 +15,7 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-# Install the "fresh" utility by running this command
-# outside of this project's directory somewhere:
-# go get github.com/pilu/fresh && go install github.com/pilu/fresh
+# NOTE: Make sure to run this command at least once first:
+# ./update-lists.sh
 
-pwd="$PWD"
-
-cd cmd/kycaml-sdn-json; \
-./run.sh; \
-cd "$pwd"
-
-cd cmd/kycaml-cons-json; \
-./run.sh; \
-cd "$pwd"
-
-cd ../kycaml; \
-go get; \
-cd "$pwd"
-
-go get; \
-HOST="127.0.0.1" PORT="3000" fresh
+docker push gcr.io/kycaml-app/kycaml-app:latest
