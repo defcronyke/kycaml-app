@@ -18,7 +18,8 @@ GPL v2 (or newer) License: [GitLab Mirror](https://gitlab.com/defcronyke/kycaml-
 
 ### Website
 
-- Online version: [https://kycaml.saladfinder.com](https://kycaml.saladfinder.com)
+- Online version (mirror 1): [https://kycaml.saladfinder.com](https://kycaml.saladfinder.com)
+- Online version (mirror 2): [https://kycaml.cryptospread.com](https://kycaml.cryptospread.com)
 - GitLab mirror (demo): [https://defcronyke.gitlab.io/kycaml-app](https://defcronyke.gitlab.io/kycaml-app)
 - GitHub mirror (demo): [https://defcronyke.github.io/kycaml-app](https://defcronyke.github.io/kycaml-app)
 - Local server: [http://127.0.0.1:3000](http://127.0.0.1:3000)
@@ -103,8 +104,10 @@ cd kycaml-app; \
 ### API
 
 - GET /names
-  - [http://127.0.0.1:3000/names](http://127.0.0.1:3000/names)
-  - [http://127.0.0.1:8080/names](http://127.0.0.1:8080/names)
+  - Online (mirror 1): [https://kycaml.saladfinder.com/names](https://kycaml.saladfinder.com/names)
+  - Online (mirror 2): [https://kycaml.cryptospread.com/names](https://kycaml.cryptospread.com/names)
+  - Local: [http://127.0.0.1:3000/names](http://127.0.0.1:3000/names)
+  - Docker: [http://127.0.0.1:8080/names](http://127.0.0.1:8080/names)
 
 ### Specially Designated Nationals And Blocked Persons (USA)
 
