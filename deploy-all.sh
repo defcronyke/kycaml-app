@@ -18,6 +18,6 @@
 # NOTE: Make sure to run this command at least once first:
 # ./update-lists.sh
 
-./build-container.sh; \
-./push.sh; \
+./build-container.sh && \
+./push.sh && \
 ./deploy.sh
