@@ -18,7 +18,7 @@
 git_commit_deploy() {
   msg="$@"
 
-  ./commit-push.sh "$msg"; \
+  ./commit-push.sh "$msg" && \
   ./deploy-all.sh
 }
 
